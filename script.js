@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded', () => {/*Aca va todo el codigo script para que se cargue bien el DOM */});
