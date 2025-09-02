@@ -1,11 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Jockey+One&display=swap"
+        rel="stylesheet">
+
+    <!-- iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- tu CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Calculadora-CO2e</title>
 </head>
-<body>
-    
+
+<body class="normal">
+
+    <!-- NAV -->
+    <nav id="menu" class="claro flex flex-row sm:flex-row items-center sm:justify-between p-4 gap-2 sm:gap-0">
+        <div class="logo"><img src="peralta.png" class="h-32 sm:h-36"></div>
+        <div class="titulo text-center sm:text-left">Calculadora CO2e</div>
+        <div class="boton mt-2 sm:mt-0 cursor-pointer" id="oscuro">
+            <i class="material-icons">dark_mode</i>
+        </div>
+    </nav>
+ 
+
+    <main class="p-4 sm:p-8 flex flex-col gap-6">
+
+        <!-- INICIO -->
+        <section id="inicio" class="flex flex-col items-center text-center gap-2">
+            <img src="co2e.png" alt="" class="max-w-full h-auto">
+            <p>"Un futuro mas verde empieza con una huella mas chica"</p>
+        </section>
+
+        <!-- FORMULARIO -->
+        <section class="formulario flex flex-col gap-6">
+
+            <!-- ENERGIA 1 -->
+            <div id="energia-1" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Cual es el consumo mensual promedio en tu hogar?</h1>
+                    <input type="number" class="border rounded p-2 w-full sm:w-auto"> kWh/mes
+                    <input type="checkbox" class="mt-2"> No lo se
+                </div>
+            </div>
+
+            <!-- ENERGIA 2 -->
+            <div id="energia-2" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Que sistema usas para calentar tu casa?</h1>
+                    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2">
+                        <label><input type="checkbox"> Gas natural</label>
+                        <label><input type="checkbox"> Butano/Propano</label>
+                        <label><input type="checkbox"> Gasoleo</label>
+                        <label><input type="checkbox"> Electricidad</label>
+                        <label><input type="checkbox"> Leña/Pellets</label>
+                        <label><input type="checkbox"> No lo se</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ENERGIA 3 -->
+            <div id="energia-3" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Tienes y usas aire acondicionado?</h1>
+                    <div class="flex flex-col gap-2">
+                        <label><input type="checkbox"> Si, bastante (mas de 4 meses por año)</label>
+                        <label><input type="checkbox"> Si, ocasionalmente (2-4 meses por año)</label>
+                        <label><input type="checkbox"> No tengo</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOVILIDAD 1 -->
+            <div id="Movilidad-1" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿tienes vuehiculo privado, cuantos km recorre al año?</h1>
+                    Si tengo <input type="number" class="border rounded p-2 w-full sm:w-auto"> KM/año
+                    <input type="checkbox" class="mt-2"> Si tengo, no se cuanto recorre al año
+                    <input type="checkbox" class="mt-2"> No tengo
+                </div>
+            </div>
+
+            <!-- MOVILIDAD 2 -->
+            <div id="Movilidad-2" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Que combustible usa el vehiculo?</h1>
+                    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2">
+                        <label><input type="checkbox"> Gasolina</label>
+                        <label><input type="checkbox"> Diesel</label>
+                        <label><input type="checkbox"> Hibrido (No enchufable)</label>
+                        <label><input type="checkbox"> Hibrido/Electrico</label>
+                        <label><input type="checkbox"> No uso</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOVILIDAD 3 -->
+            <div id="Movilidad-3" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Cuantos dias usas el transporte publico?</h1>
+                    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2">
+                        <label><input type="checkbox"> 1/2 dias</label>
+                        <label><input type="checkbox"> 3/4 dias</label>
+                        <label><input type="checkbox"> 5/6 dias</label>
+                        <label><input type="checkbox"> No uso</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOVILIDAD 4 -->
+            <div id="Movilidad-4" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Que combustible usa el vehiculo?</h1>
+                    Vuelos nacionales <input type="number" class="border rounded p-2 w-full sm:w-auto">
+                    Vuelos internacionales <input type="number" class="border rounded p-2 w-full sm:w-auto">
+                </div>
+            </div>
+
+            <!-- ALIMENTACION 1 -->
+            <div id="Alimentacion-1" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Como describirias tu dieta?</h1>
+                    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2">
+                        <input type="checkbox"> Equilibrada
+                        <input type="checkbox"> Rica en carnes rojas
+                        <input type="checkbox"> Pescetariana
+                        <input type="checkbox"> Vegetariana
+                        <input type="checkbox"> Vegana
+                    </div>
+                </div>
+            </div>
+
+            <!-- ALIMENTACION 2 -->
+            <div id="Alimentacion-2" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>Origen de la comida</h1>
+                    <input type="checkbox"> Optas por productos de origen local y/o de temporada
+                    <input type="checkbox"> Optas por productos envasados y/o procesados
+                    <input type="checkbox"> No le doy importancia a esto
+                </div>
+            </div>
+
+            <!-- ALIMENTACION 3 -->
+            <div id="Alimentacion-3" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Que haces con la comida que sobra?</h1>
+                    <input type="checkbox"> La aprovecho (Planifico/Congelo/Reuso)
+                    <input type="checkbox"> Tiro algo de comida a la basura ocacionalmente
+                </div>
+            </div>
+
+            <!-- CONSUMO 1-3 -->
+            <div id="Consumo-1" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Con que frecuencia compras ropa nueva?</h1>
+                    <input type="checkbox"> Varias veces al mes
+                    <input type="checkbox"> Una vez al mes o cada dos meses
+                    <input type="checkbox"> Unas pocas veces al año
+                    <input type="checkbox"> Casi nunca/ Compro de segunda mano
+                </div>
+            </div>
+
+            <div id="Consumo-2" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Cada cuantos renuevas tus dispositivos electronicos?</h1>
+                    <input type="checkbox"> Cada 1-2 años
+                    <input type="checkbox"> Cada 3-4 años
+                    <input type="checkbox"> Cada 4 años o mas
+                </div>
+            </div>
+
+            <div id="Consumo-3" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Donas o Vendes articulos de segunda mano?</h1>
+                    <input type="checkbox"> Frecuentemente regalo o vendo cosas que no uso
+                    <input type="checkbox"> Regalo o vendo algunas cosas
+                    <input type="checkbox"> Tiro o guardo lo que no uso
+                </div>
+            </div>
+
+            <!-- RESIDUOS 1-3 -->
+            <div id="Residuos-1" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Con que frecuencia reciclas?</h1>
+                    <input type="checkbox"> Siempre
+                    <input type="checkbox"> A veces
+                    <input type="checkbox"> Casi nunca
+                </div>
+            </div>
+
+            <div id="Residuos-2" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Como describirias la cantidad de basura que generas?</h1>
+                    <input type="checkbox"> Muy poca
+                    <input type="checkbox"> Moderada
+                    <input type="checkbox"> Bastante
+                </div>
+            </div>
+
+            <div id="Residuos-3" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Cuantas bolsas de basura produces a la semana?</h1>
+                    <input type="number" class="border rounded p-2 w-full sm:w-auto"> Bolsas/semana
+                    <input type="checkbox" class="mt-2"> No lo se
+                </div>
+            </div>
+
+        </section>
+
+        <!-- BOTONES -->
+        <section class="start flex justify-center mt-4">
+            <button class="border rounded px-4 py-2">Comenzar</button>
+        </section>
+
+        <section class="controls flex justify-between mt-4 w-full sm:w-1/2 mx-auto">
+            <button class="border rounded px-4 py-2">Atras</button>
+            <button class="border rounded px-4 py-2">Siguiente</button>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-4">
+        <p>Creado por Alumnos del ITS 2do Full Stack</p>
+    </footer>
+
+    <!-- tu JS -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>
