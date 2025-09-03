@@ -11,6 +11,13 @@ Con esta calculadora podés estimar tu impacto ambiental en base a preguntas rel
 Con la calculadora de Huella de Carbono queremos CONCIENTIZAR sobre la importancia de reducir emisiones y promover un futuro más sostenible. 🌱
 
 
+---------------------------------------------------------------------------------------------
+
+TECNOLOGIAS Y DATOS
+HTML5 - Se utilizo definir la estructura y el contenido del proyecto
+CSS3 - Se utilizo para el diseño y las animaciones
+JavaScript - Se utilizo para para darle funcionalidad al proyecto. 
+Tailwind - Se utilizo para darle estilo y darle un diseño responsive al proyecto
 
 ---------------------------------------------------------------------------------------------
 
@@ -43,6 +50,16 @@ cd nombre-repo
   Función principal en script.js que controla qué pregunta se muestra
 
 4. JavaScript – Botones de navegación
+
+---------------------------------------------------------------------------------------------
+
+REFERENCIAS UTILIZADAS
+Esta proyecto para calcular la huella de carbono personal utiliza datos agregados y procesados provenientes 
+de diversas fuentes externas, estas incluyen a:
+IPCC - Intergovernmental Panel on Climate Change [https://www.ipcc.ch/]
+Cammesa - Compañía Administradora del Mercado Mayorista Eléctrico [https://cammesaweb.cammesa.com/mater/]
+Scarborough et al. (2023) - Datos sobre impactos ambientales de dietas en el Reino Unido [https://doi.org/10.1038/s43016-023-00795-w]
+Secretaria de Energia - Informes de la Subsecretaría de Transición y Planeamiento Energético [https://datos.gob.ar/el/dataset/energia-calculo-factor-emision-co2-red-argentina-energia-electrica]
 
 ---------------------------------------------------------------------------------------------
 
