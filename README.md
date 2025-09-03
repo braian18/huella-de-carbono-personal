@@ -2,8 +2,7 @@
 
 🌍 Calculadora de Huella de Carbono (CO2e)
 
-📌 Introducción
-La huella de carbono es la cantidad total de gases de efecto invernadero emitidos directa o indirectamente por una persona, organización o producto.  
+📌 La huella de carbono es la cantidad total de gases de efecto invernadero emitidos directa o indirectamente por una persona, organización o producto.  
 Con esta calculadora podés estimar tu impacto ambiental en base a preguntas relacionadas con -energía, transporte y hábitos de consumo-.  
 El objetivo del proyecto es CONCIENTIZAR sobre la importancia de reducir emisiones y promover un futuro más sostenible. 🌱
 
