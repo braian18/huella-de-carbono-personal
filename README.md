@@ -1,12 +1,15 @@
-# huella-de-carbono-personal
+PROYECTO HUELLA DE CARBONO
+<img width="366" height="746" alt="image" src="Muestra.jpg" />
 
-🌍 Calculadora de Huella de Carbono (CO2e)
+---------------------------------------------------------------------------------------------
 
-📌 La huella de carbono es la cantidad total de gases de efecto invernadero emitidos directa o indirectamente por una persona, organización o producto.  
+🌍 CALCULADORA DE HUELLA DE CARBONO (CO2e)
+
+La huella de carbono es la cantidad total de gases de efecto invernadero emitidos directa o indirectamente por una persona, organización o producto.  
 Con esta calculadora podés estimar tu impacto ambiental en base a preguntas relacionadas con -energía, transporte y hábitos de consumo-.  
 El objetivo del proyecto es CONCIENTIZAR sobre la importancia de reducir emisiones y promover un futuro más sostenible. 🌱
 
-<img width="366" height="746" alt="image" src="Muestra.jpg" />
+
 
 ---------------------------------------------------------------------------------------------
 
@@ -14,7 +17,6 @@ El objetivo del proyecto es CONCIENTIZAR sobre la importancia de reducir emision
 
 1- Clonar el repositorio:
 git clone https://github.com/usuario/nombre-repo.git
-
 2 - Entrar en la carpeta del proyecto:
 cd nombre-repo
 
@@ -22,7 +24,7 @@ cd nombre-repo
 
 1-Abrir el archivo index.html en cualquier navegador web.
 
-2- No se necesita instalación de dependencias ni servidores adicionales.
+¡Y listo! Ya puedes empezar a usar la aplicación.
 
 ---------------------------------------------------------------------------------------------
 
