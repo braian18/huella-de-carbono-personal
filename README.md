@@ -14,10 +14,10 @@ Con la calculadora de Huella de Carbono queremos CONCIENTIZAR sobre la importanc
 ---------------------------------------------------------------------------------------------
 
 TECNOLOGIAS Y DATOS
-HTML5 - Se utilizo definir la estructura y el contenido del proyecto
-CSS3 - Se utilizo para el diseño y las animaciones
+HTML5 - Se utilizo definir la estructura y el contenido del proyecto. 
+CSS3 - Se utilizo para el diseño y las animaciones. 
 JavaScript - Se utilizo para para darle funcionalidad al proyecto. 
-Tailwind - Se utilizo para darle estilo y darle un diseño responsive al proyecto
+Tailwind - Se utilizo para darle estilo y darle un diseño responsive al proyecto. 
 
 ---------------------------------------------------------------------------------------------
 
