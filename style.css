@@ -56,6 +56,7 @@ body {
 
 }
 
+
 .boton .material-icons {
     background: none;
     border: none;
@@ -87,5 +88,8 @@ body {
   justify-content: center; /* centro horizontal */
   align-items: center;     /* centro vertical */
   height: 100%;            /* ocupa todo el espacio disponible */
+}
+.card{
+    background-color: #87BF82 ;
 }
 

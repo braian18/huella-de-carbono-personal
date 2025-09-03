@@ -4,20 +4,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const botonD = document.getElementById("oscuro");
   const nav = document.querySelector("nav");
   const body = document.querySelector("body");
+  const footer = document.querySelector("footer")
 
   botonD.addEventListener("click", () => {
     if (body.classList.contains("oscuro")) {
       // Si ya está oscuro, volvemos a claro
       nav.classList.remove("dark");
       body.classList.remove("oscuro");
+      footer.classList.remove("dark");
       nav.classList.add("claro");
       body.classList.add("natural");
+      footer.classList.add("claro");
     } else {
       // Si está claro, vamos a oscuro
       nav.classList.remove("claro");
       body.classList.remove("natural");
+      footer.classList.remove("claro");
       nav.classList.add("dark");
       body.classList.add("oscuro");
+      footer.classList.add("dark");
     }
   });
 
@@ -369,8 +374,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Mostrar / ocultar botones
-    btnAtras.disabled = index === 0;
-    btnSiguiente.disabled = index === cards.length - 1;
+  const btnCalcular = document.getElementById("btnCalcular");
+
+  if (index === 0) {
+    // Primera pregunta → solo mostrar siguiente
+    btnAtras.classList.add("hidden");
+    btnSiguiente.classList.remove("hidden");
+    btnCalcular.classList.add("hidden")
+  } else if (index === cards.length - 1) {
+    // Última pregunta → solo mostrar atrás y calcular
+    btnAtras.classList.remove("hidden");
+    btnSiguiente.classList.add("hidden");
+    btnCalcular.classList.remove("hidden");
+  } else {
+    // Pregunta intermedia → mostrar atrás y siguiente
+    btnAtras.classList.remove("hidden");
+    btnSiguiente.classList.remove("hidden");
+    btnCalcular.classList.add("hidden");
+  }
   }
 
   // Al hacer click en comenzar
