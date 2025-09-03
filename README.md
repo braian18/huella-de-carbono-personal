@@ -18,6 +18,7 @@ Con la calculadora de Huella de Carbono queremos CONCIENTIZAR sobre la importanc
 
 1- Clonar el repositorio:
 git clone https://github.com/usuario/nombre-repo.git
+
 2 - Entrar en la carpeta del proyecto:
 cd nombre-repo
 
