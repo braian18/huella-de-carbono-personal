@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- importamos el css y las fuentes -->
-    <link rel="stylesheet" href="style.css">
     <!-- fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Jockey+One&display=swap"
+        rel="stylesheet">
+
     <!-- iconos -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+
+    <!-- tu CSS -->
+    <link rel="stylesheet" href="style.css">
+
     <title>Calculadora-CO2e</title>
-
-
 </head>
 
-<body>
-    <nav>
-        <div class="logo"><img src="peralta.png"></div>
+<body class="normal">
 
-        <div class="titulo">Calculadora-CO2e</div>
-
-        <!-- insertamos un icono en el boton -->
-        <div class="boton"><i class="material-icons">dark_mode</i></div>
-
+    <!-- NAV -->
+    <nav id="menu" class="claro flex flex-row sm:flex-row items-center sm:justify-between p-4 gap-2 sm:gap-0">
+        <div class="logo"><img src="peralta.png" class="h-32 sm:h-36"></div>
+        <div class="titulo text-center sm:text-left">Calculadora CO2e</div>
+        <div class="boton mt-2 sm:mt-0 cursor-pointer" id="oscuro">
+            <i class="material-icons">dark_mode</i>
+        </div>
     </nav>
     <main>
         <header>
@@ -188,17 +193,26 @@
         <section class="" id="start">
             <button class="">Comenzar</button> <!--Cuando se presione este boton se oculta y se muestra la seccion "controls" -->
         </section>
-        <section class="" id="controls">
-            <button class="">Atras</button>
-            <button class="">siguiente</button>
+
+        <section class="" id="controls flex justify-between mt-4 w-full sm:w-1/2 mx-auto">
+            <button class="border rounded px-4 py-2">Atras</button>
+            <button class="border rounded px-4 py-2">Siguiente</button>
         </section>
          <section class="" id="calcular">
             <button class="">Calcular</button>
         </section>
+
     </main>
-    <footer>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-4">
 
     </footer>
+
+    <!-- tu JS -->
     <script src="script.js"></script>
+
 </body>
+
 </html>
+
