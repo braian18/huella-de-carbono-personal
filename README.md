@@ -12,7 +12,7 @@ El objetivo del proyecto es CONCIENTIZAR sobre la importancia de reducir emision
 💻 FRAGMENTOS DEL CODIGO RELEVANTES
 
 1. HTML – Pregunta del formulario
-   Ejemplo de cómo está estructurada una pregunta en pregunta.html
+   Ejemplo de cómo está estructurada una pregunta en index.html
 
 2. CSS – Estilos personalizados para modo claro/oscuro
   Definición de fondos dinámicos en style.css
@@ -34,4 +34,9 @@ USO DE RAMAS:
 main → versión estable.
 dev → pruebas y nuevas funcionalidades.
 feature/nombre-funcionalidad → desarrollo de una nueva parte.
+
+
+
+
+
 
