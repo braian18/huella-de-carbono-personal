@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (calefaccion) {
         switch (calefaccion.value) {
           case "gas_natural":
-            (factorCalefaccion = 800 * 1), 95;
+            factorCalefaccion = 800 * 1.95;
             break;
           case "butano":
             factorCalefaccion = 300 * 2.96;
@@ -132,14 +132,14 @@ document.addEventListener("DOMContentLoaded", () => {
       let factorTransportePublico = 0;
       if (transportePublico) {
         switch (transportePublico.value) {
-          case "2_3dias":
-            factorTransportePublico = -260;
+          case "2dias":
+            factorTransportePublico = 0;
             break;
-          case "4_5dias":
-            factorTransportePublico = -468;
+          case "3_4dias":
+            factorTransportePublico = 0;
             break;
-          case "6_7dias":
-            factorTransportePublico = -676;
+          case "5_6dias":
+            factorTransportePublico = 0;
             break;
           case "no_uso_trasporte_publico":
             factorTransportePublico = 0;
@@ -147,15 +147,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
       // Huella anual transporte público (estimación)
-      const huellaTransportePublico = factorTransportePublico; // al año
+      const huellaTransportePublico = factorTransportePublico * 52; // semanas al año
 
       ////Vuelos
       const vuelosNac =
         parseFloat(document.getElementById("vuelos_nac").value) || 0;
       const vuelosInt =
         parseFloat(document.getElementById("vuelos_int").value) || 0;
-      const factorVueloNac = 1050 * 0.324;
-      const factorVueloInt = 7500 * 0.324;
+      const factorVueloNac = 0;
+      const factorVueloInt = 0;
       const huellaVuelos =
         vuelosNac * factorVueloNac + vuelosInt * factorVueloInt;
 
@@ -165,23 +165,22 @@ document.addEventListener("DOMContentLoaded", () => {
       if (dieta) {
         switch (dieta.value) {
           case "equilibrada":
-            factorDieta = 5.34*365;
+            factorDieta = 0;
             break;
           case "carnes_rojas":
-            factorDieta = 7.28*365;
+            factorDieta = 0;
             break;
           case "pescetariana":
-            factorDieta = 3.81*365;
+            factorDieta = 0;
             break;
           case "vegetariana":
-            factorDieta = 3.33*365;
+            factorDieta = 0;
             break;
           case "vegana":
-            factorDieta = 2.16*365;
+            factorDieta = 0;
             break;
         }
-      }///Estos valores son estimaciones promedio basadas en estudios globales 
-      // (como los de la FAO o IPCC) y pueden variar según regiones o hábitos individuales.
+      }
 
       const origenComida = document.querySelector(
         'input[name="origen_comida"]:checked'
@@ -190,10 +189,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (origenComida) {
         switch (origenComida.value) {
           case "origen_local":
-            factorOrigenComida = -150;
+            factorOrigenComida = 0;
             break;
           case "envasados_procesados":
-            factorOrigenComida = 300;
+            factorOrigenComida = 0;
             break;
           case "no_me_importa":
             factorOrigenComida = 0;
@@ -208,10 +207,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (comidaSobrante) {
         switch (comidaSobrante.value) {
           case "aprovecho":
-            factorComidaSobrante = -200;
+            factorComidaSobrante = 0;
             break;
           case "tiro_algo":
-            factorComidaSobrante = +250;
+            factorComidaSobrante = 0;
             break;
           case "no_importa_desperdicio":
             factorComidaSobrante = 0;
@@ -230,16 +229,16 @@ document.addEventListener("DOMContentLoaded", () => {
       if (ropaNueva) {
         switch (ropaNueva.value) {
           case "varias_veces":
-            factorRopaNueva = 300;
+            factorRopaNueva = 0;
             break;
           case "una_cada_dos":
-            factorRopaNueva = 150;
+            factorRopaNueva = 0;
             break;
           case "poco_al_año":
-            factorRopaNueva = 50;
+            factorRopaNueva = 0;
             break;
           case "nunca_segunda_mano":
-            factorRopaNueva = -100;
+            factorRopaNueva = 0;
             break;
         }
       }
@@ -251,13 +250,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (dispElectronicos) {
         switch (dispElectronicos.value) {
           case "uno_dos_año":
-            factorDispElectronicos = 200;
+            factorDispElectronicos = 0;
             break;
           case "tres_cuatro_año":
-            factorDispElectronicos = 400;
+            factorDispElectronicos = 0;
             break;
           case "cuatro_año":
-            factorDispElectronicos = 600;
+            factorDispElectronicos = 0;
             break;
         }
       }
@@ -269,13 +268,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (donasVendes) {
         switch (donasVendes.value) {
           case "frecuente_dono":
-            factorDonasVendes = -80;
+            factorDonasVendes = 0;
             break;
           case "aveces_dono":
-            factorDonasVendes = -40;
+            factorDonasVendes = 0;
             break;
           case "tiro_regalo":
-            factorDonasVendes = 100;
+            factorDonasVendes = 0;
             break;
         }
       }
@@ -289,13 +288,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (reciclas) {
         switch (reciclas.value) {
           case "siempre":
-            factorReciclas = -150;
+            factorReciclas = 0;
             break;
           case "aveces":
-            factorReciclas = -50;
+            factorReciclas = 0;
             break;
           case "casi_nunca":
-            factorReciclas = 100;
+            factorReciclas = 0;
             break;
         }
       }
@@ -307,13 +306,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (basuraGenerada) {
         switch (basuraGenerada.value) {
           case "muy_poca":
-            factorBasuraGenerada = -100;
+            factorBasuraGenerada = 0;
             break;
           case "moderada":
             factorBasuraGenerada = 0;
             break;
           case "bastante":
-            factorBasuraGenerada = 200;
+            factorBasuraGenerada = 0;
             break;
         }
       }
@@ -330,25 +329,67 @@ document.addEventListener("DOMContentLoaded", () => {
         factorBasuraGenerada +
         bolsasBasura * factorBolsasBasura;
 
-
-        const personasInput = document.getElementById("personas")
-        if (personasInput.value){
-            huellaCasa = (huellaEnergia + huellaCalefaccion + huellaAire+ huellaResiduos+huellaVehiculo)/personasInput.value
-        }
-
       // Suma total huella anual
       const huellaTotal =
-        (huellaCasa +
+        huellaEnergia +
+        huellaCalefaccion +
+        huellaAire +
+        huellaVehiculo +
         huellaTransportePublico +
         huellaVuelos +
         huellaAlimentacion +
-        huellaConsumo)/1000
+        huellaConsumo +
+        huellaResiduos;
 
       alert(
         "Tu huella de carbono estimada anual es: " +
-          huellaTotal.toFixed(1) +
-          " T CO2e"
+        huellaTotal.toFixed(2) +
+        " kg CO2e"
       );
     });
 
+  const btnComenzar = document.getElementById("btnComenzar");
+  const inicio = document.getElementById("inicio");
+  const cardsContainer = document.getElementById("cardsContainer");
+  const controls = document.getElementById("botones");
+  const btnAtras = document.getElementById("btnAtras");
+  const btnSiguiente = document.getElementById("btnSiguiente");
+
+  const cards = document.querySelectorAll(".card");
+  let currentCard = 0;
+
+  // Ocultar todas las cards
+  function mostrarCard(index) {
+    cards.forEach((card, i) => {
+      card.classList.toggle("hidden", i !== index);
+    });
+
+    // Mostrar / ocultar botones
+    btnAtras.disabled = index === 0;
+    btnSiguiente.disabled = index === cards.length - 1;
+  }
+
+  // Al hacer click en comenzar
+  btnComenzar.addEventListener("click", () => {
+    inicio.classList.add("hidden"); // oculto intro
+    cardsContainer.classList.remove("hidden");
+    controls.classList.remove("hidden");
+    mostrarCard(currentCard);
+  });
+
+  // Botón siguiente
+  btnSiguiente.addEventListener("click", () => {
+    if (currentCard < cards.length - 1) {
+      currentCard++;
+      mostrarCard(currentCard);
+    }
+  });
+
+  // Botón atrás
+  btnAtras.addEventListener("click", () => {
+    if (currentCard > 0) {
+      currentCard--;
+      mostrarCard(currentCard);
+    }
+  });
 });

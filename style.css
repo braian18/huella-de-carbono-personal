@@ -82,3 +82,10 @@ body {
 
 }
 
+#cardsContainer {
+  display: flex;
+  justify-content: center; /* centro horizontal */
+  align-items: center;     /* centro vertical */
+  height: 100%;            /* ocupa todo el espacio disponible */
+}
+
