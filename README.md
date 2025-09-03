@@ -1,7 +1,22 @@
 # huella-de-carbono-personal
 
+🌍 Calculadora de Huella de Carbono (CO2e)
+
+📌 Introducción
+La huella de carbono es la cantidad total de gases de efecto invernadero emitidos directa o indirectamente por una persona, organización o producto.  
+Con esta calculadora podés estimar tu impacto ambiental en base a preguntas relacionadas con -energía, transporte y hábitos de consumo-.  
+El objetivo del proyecto es CONCIENTIZAR sobre la importancia de reducir emisiones y promover un futuro más sostenible. 🌱
 <img width="366" height="746" alt="image" src="Muestra.jpg" />
 
+COMMITS CLAROS Y FRECUENTES:
 
-En este repositorio vamos a realizar una aplicación para que el usuario pueda calcular su huella de carbono personal
+git commit -m "Agrego estructura base de index.html"
+git commit -m "Implemento navegación entre preguntas con JS"
+git commit -m "Mejora de estilos con Tailwind y CSS"
+
+USO DE RAMAS:
+
+main → versión estable.
+dev → pruebas y nuevas funcionalidades.
+feature/nombre-funcionalidad → desarrollo de una nueva parte.
 
