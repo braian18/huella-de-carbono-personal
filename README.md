@@ -16,6 +16,8 @@ El objetivo del proyecto es CONCIENTIZAR sobre la importancia de reducir emision
 
 2. CSS – Estilos personalizados para modo claro/oscuro
   Definición de fondos dinámicos en style.css
+<img width="567" height="236" alt="image" src="https://github.com/user-attachments/assets/dc824e63-8d43-4f9d-a653-79be26a17d1e" />
+
 
 
 COMMITS CLAROS Y FRECUENTES:
