@@ -17,14 +17,22 @@ body {
 }
 
 .normal {
-    background-image: url(foto\ orginal\ 1.png);
+    background-image: url(fotoorginal1.png);
     background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
     transition: background-image 0.5s ease, color 0.5s ease;
+    background-position: center;
+    background-size: cover;
 }
 
 .oscuro {
     background-image: url(oscuro.png);
+    background-repeat: no-repeat;
     transition: background-image 0.5s ease, color 0.5s ease;
+    background-position: center;
+    background-size: cover;
+
 }
 
 .claro {
@@ -80,4 +88,49 @@ body {
     border-bottom: solid 1px rgba(0, 0, 0, 0.15);
     transition: background-color 0.5s ease, color 0.5s ease;
 
+}
+
+.footero {
+    background-color: #373A39;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+#inicio {
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    height: 9%;
+    width: 100%;
+    background-color: #6C966D;
+}
+
+@layer utilities {
+    .bg-normal {
+        background-image: url('foto orginal 1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .bg-oscuro {
+        background-image: url('oscuro.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Versión vertical para pantallas pequeñas */
+    @screen sm {
+        .bg-normal {
+            background-image: url('fondoC.png');
+        }
+
+        .bg-oscuro {
+            background-image: url('fondoO.png');
+        }
+    }
 }
