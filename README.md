@@ -8,6 +8,24 @@ El objetivo del proyecto es CONCIENTIZAR sobre la importancia de reducir emision
 
 <img width="366" height="746" alt="image" src="Muestra.jpg" />
 
+---------------------------------------------------------------------------------------------
+
+🔹 INSTALACIÒN 
+
+1- Clonar el repositorio:
+git clone https://github.com/usuario/nombre-repo.git
+
+2 - Entrar en la carpeta del proyecto:
+cd nombre-repo
+
+🔹 EJECUCIÒN
+
+1-Abrir el archivo index.html en cualquier navegador web.
+
+2- No se necesita instalación de dependencias ni servidores adicionales.
+
+---------------------------------------------------------------------------------------------
+
 💻 FRAGMENTOS DEL CODIGO RELEVANTES
 
 1. HTML – Pregunta del formulario
@@ -21,6 +39,8 @@ El objetivo del proyecto es CONCIENTIZAR sobre la importancia de reducir emision
   Función principal en script.js que controla qué pregunta se muestra
 
 4. JavaScript – Botones de navegación
+
+---------------------------------------------------------------------------------------------
 
 COMMITS CLAROS Y FRECUENTES:
 
