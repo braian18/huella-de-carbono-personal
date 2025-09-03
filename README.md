@@ -46,17 +46,13 @@ cd nombre-repo
 
 ---------------------------------------------------------------------------------------------
 
-COMMITS CLAROS Y FRECUENTES:
-
-git commit -m "Agrego estructura base de index.html"
-git commit -m "Implemento navegación entre preguntas con JS"
-git commit -m "Mejora de estilos con Tailwind y CSS"
-
 USO DE RAMAS:
 
 main → versión estable.
-dev → pruebas y nuevas funcionalidades.
-feature/nombre-funcionalidad → desarrollo de una nueva parte.
+inicioDeProyecto → se creo la base y se introdujo el contenido basico de la pagina
+funcionalidad_form → se creo el script para añadirle funcinalidad al formulario
+menu → se creo el navbar aparte de añadir otros estilos
+diseño-responsive → se le añadio la cualidad responsive al proyecto
 
 
 
