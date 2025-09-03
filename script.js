@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (calefaccion) {
         switch (calefaccion.value) {
           case "gas_natural":
-            factorCalefaccion = 800 * 1.95;
+            (factorCalefaccion = 800 * 1), 95; // 
             break;
           case "butano":
             factorCalefaccion = 300 * 2.96;
@@ -132,14 +132,14 @@ document.addEventListener("DOMContentLoaded", () => {
       let factorTransportePublico = 0;
       if (transportePublico) {
         switch (transportePublico.value) {
-          case "2dias":
-            factorTransportePublico = 0;
+          case "2_3dias":
+            factorTransportePublico = -260;
             break;
-          case "3_4dias":
-            factorTransportePublico = 0;
+          case "4_5dias":
+            factorTransportePublico = -468;
             break;
-          case "5_6dias":
-            factorTransportePublico = 0;
+          case "6_7dias":
+            factorTransportePublico = -676;
             break;
           case "no_uso_trasporte_publico":
             factorTransportePublico = 0;
@@ -147,15 +147,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
       // Huella anual transporte público (estimación)
-      const huellaTransportePublico = factorTransportePublico * 52; // semanas al año
+      const huellaTransportePublico = factorTransportePublico; // al año
 
       ////Vuelos
       const vuelosNac =
         parseFloat(document.getElementById("vuelos_nac").value) || 0;
       const vuelosInt =
         parseFloat(document.getElementById("vuelos_int").value) || 0;
-      const factorVueloNac = 0;
-      const factorVueloInt = 0;
+      const factorVueloNac = 1050 * 0.324;
+      const factorVueloInt = 7500 * 0.324;
       const huellaVuelos =
         vuelosNac * factorVueloNac + vuelosInt * factorVueloInt;
 
@@ -165,22 +165,23 @@ document.addEventListener("DOMContentLoaded", () => {
       if (dieta) {
         switch (dieta.value) {
           case "equilibrada":
-            factorDieta = 0;
+            factorDieta = 5.34*365;
             break;
           case "carnes_rojas":
-            factorDieta = 0;
+            factorDieta = 7.28*365;
             break;
           case "pescetariana":
-            factorDieta = 0;
+            factorDieta = 3.81*365;
             break;
           case "vegetariana":
-            factorDieta = 0;
+            factorDieta = 3.33*365;
             break;
           case "vegana":
-            factorDieta = 0;
+            factorDieta = 2.16*365;
             break;
         }
-      }
+      }///Estos valores son estimaciones promedio basadas en estudios globales 
+      // (como los de la FAO o IPCC) y pueden variar según regiones o hábitos individuales.
 
       const origenComida = document.querySelector(
         'input[name="origen_comida"]:checked'
@@ -189,10 +190,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (origenComida) {
         switch (origenComida.value) {
           case "origen_local":
-            factorOrigenComida = 0;
+            factorOrigenComida = -150;
             break;
           case "envasados_procesados":
-            factorOrigenComida = 0;
+            factorOrigenComida = 300;
             break;
           case "no_me_importa":
             factorOrigenComida = 0;
@@ -207,10 +208,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (comidaSobrante) {
         switch (comidaSobrante.value) {
           case "aprovecho":
-            factorComidaSobrante = 0;
+            factorComidaSobrante = -200;
             break;
           case "tiro_algo":
-            factorComidaSobrante = 0;
+            factorComidaSobrante = +250;
             break;
           case "no_importa_desperdicio":
             factorComidaSobrante = 0;
@@ -229,16 +230,16 @@ document.addEventListener("DOMContentLoaded", () => {
       if (ropaNueva) {
         switch (ropaNueva.value) {
           case "varias_veces":
-            factorRopaNueva = 0;
+            factorRopaNueva = 300;
             break;
           case "una_cada_dos":
-            factorRopaNueva = 0;
+            factorRopaNueva = 150;
             break;
           case "poco_al_año":
-            factorRopaNueva = 0;
+            factorRopaNueva = 50;
             break;
           case "nunca_segunda_mano":
-            factorRopaNueva = 0;
+            factorRopaNueva = -100;
             break;
         }
       }
@@ -250,13 +251,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (dispElectronicos) {
         switch (dispElectronicos.value) {
           case "uno_dos_año":
-            factorDispElectronicos = 0;
+            factorDispElectronicos = 200;
             break;
           case "tres_cuatro_año":
-            factorDispElectronicos = 0;
+            factorDispElectronicos = 400;
             break;
           case "cuatro_año":
-            factorDispElectronicos = 0;
+            factorDispElectronicos = 600;
             break;
         }
       }
@@ -268,13 +269,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (donasVendes) {
         switch (donasVendes.value) {
           case "frecuente_dono":
-            factorDonasVendes = 0;
+            factorDonasVendes = -80;
             break;
           case "aveces_dono":
-            factorDonasVendes = 0;
+            factorDonasVendes = -40;
             break;
           case "tiro_regalo":
-            factorDonasVendes = 0;
+            factorDonasVendes = 100;
             break;
         }
       }
@@ -288,13 +289,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (reciclas) {
         switch (reciclas.value) {
           case "siempre":
-            factorReciclas = 0;
+            factorReciclas = -150;
             break;
           case "aveces":
-            factorReciclas = 0;
+            factorReciclas = -50;
             break;
           case "casi_nunca":
-            factorReciclas = 0;
+            factorReciclas = 100;
             break;
         }
       }
@@ -306,13 +307,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (basuraGenerada) {
         switch (basuraGenerada.value) {
           case "muy_poca":
-            factorBasuraGenerada = 0;
+            factorBasuraGenerada = -100;
             break;
           case "moderada":
             factorBasuraGenerada = 0;
             break;
           case "bastante":
-            factorBasuraGenerada = 0;
+            factorBasuraGenerada = 200;
             break;
         }
       }
@@ -329,24 +330,27 @@ document.addEventListener("DOMContentLoaded", () => {
         factorBasuraGenerada +
         bolsasBasura * factorBolsasBasura;
 
+
+        const personasInput = document.getElementById("personas")
+        if (personasInput.value){
+            huellaCasa = (huellaEnergia + huellaCalefaccion + huellaAire+ huellaResiduos+huellaVehiculo)/personasInput.value
+        }
+
       // Suma total huella anual
       const huellaTotal =
-        huellaEnergia +
-        huellaCalefaccion +
-        huellaAire +
-        huellaVehiculo +
+        (huellaCasa +
         huellaTransportePublico +
         huellaVuelos +
         huellaAlimentacion +
-        huellaConsumo +
-        huellaResiduos;
+        huellaConsumo)/1000
 
       alert(
         "Tu huella de carbono estimada anual es: " +
-        huellaTotal.toFixed(2) +
-        " kg CO2e"
+          huellaTotal.toFixed(1) +
+          " T CO2e"
       );
     });
+
 
   const btnComenzar = document.getElementById("btnComenzar");
   const inicio = document.getElementById("inicio");
