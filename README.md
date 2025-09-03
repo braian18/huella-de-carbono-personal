@@ -6,7 +6,17 @@
 La huella de carbono es la cantidad total de gases de efecto invernadero emitidos directa o indirectamente por una persona, organización o producto.  
 Con esta calculadora podés estimar tu impacto ambiental en base a preguntas relacionadas con -energía, transporte y hábitos de consumo-.  
 El objetivo del proyecto es CONCIENTIZAR sobre la importancia de reducir emisiones y promover un futuro más sostenible. 🌱
+
 <img width="366" height="746" alt="image" src="Muestra.jpg" />
+
+💻 FRAGMENTOS DEL CODIGO RELEVANTES
+
+1. HTML – Pregunta del formulario
+   Ejemplo de cómo está estructurada una pregunta en pregunta.html
+
+2. CSS – Estilos personalizados para modo claro/oscuro
+  Definición de fondos dinámicos en style.css
+
 
 COMMITS CLAROS Y FRECUENTES:
 
