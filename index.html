@@ -34,179 +34,227 @@
             <i class="material-icons">dark_mode</i>
         </div>
     </nav>
-    <main>
-        <header>
-            
-        </header>
-        <section class="">
+    <main class="p-4 sm:p-8 flex flex-col gap-6">
+
+        <section class="flex flex-col items-center text-center gap-2">
             <form id="formulario">
-                 <div class="" id="inicio">
-                    <img src="co2e.png" alt="" srcset="">
+                <div class="" id="inicio">
+                    <img src="co2e.png" alt="" class="max-w-full h-auto">
                     <p>
                         "Un futuro mas verde empieza con una huella mas chica"
                     </p>
                 </div>
+        </section>
 
-                <div class="" id="energia-1">
-                    <div class="" id="conteiner">
-                        <h1>¿Cual es el consumo mensual promedio en tu hogar?</h1>
-                        <input type="number" name="consumo_energia" id="consumo_energia" min="0">kWh/mes
-                        <input type="radio" name="no_se_energia" id="no_se_energia">No lo se
-                    </div>
+        <section class="formulario flex flex-col gap-6">
+
+            <!-- ENERGIA 1 -->
+            <div id="energia-1" class="flex justify-center">
+                <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
+                    <h1>¿Cual es el consumo mensual promedio en tu hogar?</h1>
+                    <input type="number" name="consumo_energia" id="consumo_energia" min="0"
+                        class="border rounded p-2 w-full sm:w-auto">kWh/mes
+                    <input type="radio" name="no_se_energia" id="no_se_energia" class="mt-2">No lo se
                 </div>
-                <div class="" id="energia-2">
-                    <div class="" id="conteiner">
-                        <h1>¿Que sistema usas para calentar tu casa?</h1>
+            </div>
+
+            <div class="flex justify-center" id="energia-2">
+                <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
+                    <h1>¿Que sistema usas para calentar tu casa?</h1>
+                    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2">
                         <input type="radio" name="calefaccion" value="gas_natural" id="gas_natural">Gas natural
                         <input type="radio" name="calefaccion" value="butano" id="butano">Butano/Propano
                         <input type="radio" name="calefaccion" value="gasoil" id="gasoil">Gasoil
                         <input type="radio" name="calefaccion" value="electricidad" id="electricidad">Electricidad
                         <input type="radio" name="calefaccion" value="leña_pellets" id="leña_pellets">Leña/Pellets
-                        <input type="radio" name="calefaccion" value="no_lo_se_calefaccion" id="no_lo_se_calefaccion" checked>No lo se
+                        <input type="radio" name="calefaccion" value="no_lo_se_calefaccion" id="no_lo_se_calefaccion"
+                            checked>No lo se
                     </div>
                 </div>
-                <div class="" id="energia-3">
-                    <div class="" id="conteiner">
-                        <h1>¿Tienes y usas aire acondicionado?</h1>
-                        <input type="radio" name="aire_acondicionado" value="si_mucho" id="si_mucho">Si, bastante(mas de 4 meses por año)
-                        <input type="radio" name="aire_acondicionado" value="si_poco" id="si_poco">Si, ocasionalmente(2-4 meses por año)
-                        <input type="radio" name="aire_acondicionado" value="no_tengo_aire" id="no_tengo_aire" checked>No tengo
-                    </div>
+            </div>
+            <div class="flex justify-center" id="energia-3">
+                <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
+                    <h1>¿Tienes y usas aire acondicionado?</h1>
+                    <input type="radio" name="aire_acondicionado" value="si_mucho" id="si_mucho">Si, bastante(mas de
+                    4 meses por año)
+                    <input type="radio" name="aire_acondicionado" value="si_poco" id="si_poco">Si,
+                    ocasionalmente(2-4 meses por año)
+                    <input type="radio" name="aire_acondicionado" value="no_tengo_aire" id="no_tengo_aire" checked>No
+                    tengo
                 </div>
+            </div>
 
 
-                <div class="" id="movilidad-1">
-                    <div class="" id="conteiner">
-                        <h1>¿tienes vuehiculo privado, cuantos km recorre al año?</h1> 
-                        Si tengo, recorre <input type="number" id="km_vehiculo" min="0" placeholder="KM/año">KM/año
-                        <input type="radio" name="km_vehiculo" id="no_se_vehiculo">Si tengo, no se cuanto recorre al año
-                        <input type="radio" name="km_vehiculo" id="no_tengo_vehiculo">No tengo
-                    </div>
+            <div class="flex justify-center" id="movilidad-1">
+                <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
+                    <h1>¿tienes vuehiculo privado, cuantos km recorre al año?</h1>
+                    Si tengo, recorre
+                    <input type="number" id="km_vehiculo" min="0" placeholder="KM/año"
+                        class="border rounded p-2 w-full sm:w-auto">KM/año
+                    <input type="radio" name="km_vehiculo" id="no_se_vehiculo">Si tengo, no se cuanto recorre al año
+                    <input type="radio" name="km_vehiculo" id="no_tengo_vehiculo">No tengo
                 </div>
-                <div class="" id="movilidad-2">
-                    <div class="" id="conteiner">
-                        <h1>¿Que combustible usa el vehiculo?</h1>
+            </div>
+            <div class="flex justify-center" id="movilidad-2">
+                <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
+                    <h1>¿Que combustible usa el vehiculo?</h1>
+                    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2">
                         <input type="radio" name="combustible_vehiculo" value="gasolina" id="gasolina">Gasolina
                         <input type="radio" name="combustible_vehiculo" value="diesel" id="diesel">Diesel
-                        <input type="radio" name="combustible_vehiculo" value="hibrido_no" id="hibrido_no">Hibrido (No enchufable)
-                        <input type="radio" name="combustible_vehiculo" value="electrico" id="electrico">Hibrido/Electrico
-                        <input type="radio" name="combustible_vehiculo" value="no_uso_vehiculo" id="no_uso_vehiculo">No uso
+                        <input type="radio" name="combustible_vehiculo" value="hibrido_no" id="hibrido_no">Hibrido (No
+                        enchufable)
+                        <input type="radio" name="combustible_vehiculo" value="electrico"
+                            id="electrico">Hibrido/Electrico
+                        <input type="radio" name="combustible_vehiculo" value="no_uso_vehiculo" id="no_uso_vehiculo">No
+                        uso
                     </div>
                 </div>
-                <div class="" id="movilidad-3">
-                    <div class="" id="conteiner">
-                        <h1>¿Cuantos dias usas el transporte publico?</h1>
+            </div>
+            <div class="flex justify-center" id="movilidad-3">
+                <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
+                    <h1>¿Cuantos dias usas el transporte publico?</h1>
+                    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2">
                         <input type="radio" name="transporte_publico" value="2dias" id="">2/3 dias
                         <input type="radio" name="transporte_publico" value="3_4dias" id="">4/5 dias
                         <input type="radio" name="transporte_publico" value="5_6dias" id="">6/7 dias
                         <input type="radio" name="transporte_publico" value="no_uso_trasporte_publico" id="">1 o No uso
                     </div>
                 </div>
-                <div class="" id="movilidad-4">
-                    <div class="" id="conteiner">
-                        <h1>¿Que combustible usa el vehiculo?</h1>
-                        Vuelos nacionales <input type="number" name="vuelos_nac" id="vuelos_nac" min="0" placeholder="Cantidad">
-                        Vuelos internacionales <input type="number" name="vuelos_int" id="vuelos_int" min="0" placeholder="Cantidad">
-                    </div>
+            </div>
+            <div class="flex justify-center" id="movilidad-4">
+                <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
+                    <h1>¿Que combustible usa el vehiculo?</h1>
+                    Vuelos nacionales <input type="number" name="vuelos_nac" id="vuelos_nac" min="0"
+                        placeholder="Cantidad" class="border rounded p-2 w-full sm:w-auto">
+                    Vuelos internacionales <input type="number" name="vuelos_int" id="vuelos_int" min="0"
+                        placeholder="Cantidad" class="border rounded p-2 w-full sm:w-auto">
                 </div>
+            </div>
 
-                <div class="" id="alimentacion-1">
-                    <div class="" id="conteiner">
-                        <h1>¿Como describirias tu dieta?</h1>
-                        <input type="radio" name="dieta" value="equilibrada" id="equilibrada">Equilibrada
-                        <input type="radio" name="dieta" value="carnes_rojas" id="carnes_rojas">Rica en carnes rojas
-                        <input type="radio" name="dieta" value="pescetariana" id="pescetariana">Pescetariana
-                        <input type="radio" name="dieta" value="vegetariana" id="vegetariana">Vegetariana
-                        <input type="radio" name="dieta" value="vegana" id="vegana">Vegana
-                    </div>
+            <div  class="flex justify-center" id="alimentacion-1">
+                <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
+                    <h1>¿Como describirias tu dieta?</h1>
+                    <input type="radio" name="dieta" value="equilibrada" id="equilibrada">Equilibrada
+                    <input type="radio" name="dieta" value="carnes_rojas" id="carnes_rojas">Rica en carnes rojas
+                    <input type="radio" name="dieta" value="pescetariana" id="pescetariana">Pescetariana
+                    <input type="radio" name="dieta" value="vegetariana" id="vegetariana">Vegetariana
+                    <input type="radio" name="dieta" value="vegana" id="vegana">Vegana
                 </div>
-                <div class="" id="alimentacion-2">
-                    <div class="" id="conteiner">
-                        <h1>Origen de la comida</h1>
-                        <input type="radio" name="origen_comida" value="origen_local" id="origen_local">Optas por productos de origen local y/o de temporada
-                        <input type="radio" name="origen_comida" value="envasados_procesados" id="envasados_procesados">Optas por productos envasados y/o procesados
-                        <input type="radio" name="origen_comida" value="no_me_importa" id="no_me_importa">No le doy importancia a esto
+            </div>
+            <div class="flex justify-center" id="alimentacion-2">
+                <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
+                    <h1>Origen de la comida</h1>
+                    <input type="radio" name="origen_comida" value="origen_local" id="origen_local">Optas por
+                    productos de origen local y/o de temporada
+                    <input type="radio" name="origen_comida" value="envasados_procesados"
+                        id="envasados_procesados">Optas por productos envasados y/o procesados
+                    <input type="radio" name="origen_comida" value="no_me_importa" id="no_me_importa">No le doy
+                    importancia a esto
                 </div>
-                <div class="" id="alimentacion-3">
-                    <div class="" id="conteiner">
+            </div>
+                <div class="flex justify-center" id="alimentacion-3">
+                    <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
                         <h1>¿Que haces con la comida que sobra?</h1>
-                        <input type="radio" name="comida_sobrante" value="aprovecho" id="aprovecho">La aprovecho (Planifico/Congelo/Reuso)
-                        <input type="radio" name="comida_sobrante" value="tiro_algo" id="tiro_algo">Tiro algo de comida a la basura ocacionalmente
-                        <input type="radio" name="comida_sobrante" value="no_importa_desperdicio" id="no_importa_desperdicio">No le doy importancia a eso
+                        <input type="radio" name="comida_sobrante" value="aprovecho" id="aprovecho">La aprovecho
+                        (Planifico/Congelo/Reuso)
+                        <input type="radio" name="comida_sobrante" value="tiro_algo" id="tiro_algo">Tiro algo de
+                        comida a la basura ocacionalmente
+                        <input type="radio" name="comida_sobrante" value="no_importa_desperdicio"
+                            id="no_importa_desperdicio">No le doy importancia a eso
                     </div>
                 </div>
 
-                <div class="" id="consumo-1">
-                    <div class="" id="conteiner">
+                <div class="flex justify-center" id="consumo-1">
+                    <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
                         <h1>¿Con que frecuencia compras ropa nueva?</h1>
-                        <input type="radio" name="ropa_nueva" value="varias_veces" id="varias_veces">Varias veces al mes
-                        <input type="radio" name="ropa_nueva" value="una_cada_dos" id="una_cada_dos">Una vez al mes oa cada dos meses     
-                        <input type="radio" name="ropa_nueva" value="poco_al_año" id="poco_al_año">Unas pocas veces al año
-                        <input type="radio" name="ropa_nueva" value="nunca_segunda_mano" id="nunca_segunda_mano">Casi nunca/ Compro de segunda mano
+                        <input type="radio" name="ropa_nueva" value="varias_veces" id="varias_veces">Varias veces al
+                        mes
+                        <input type="radio" name="ropa_nueva" value="una_cada_dos" id="una_cada_dos">Una vez al mes
+                        oa cada dos meses
+                        <input type="radio" name="ropa_nueva" value="poco_al_año" id="poco_al_año">Unas pocas veces
+                        al año
+                        <input type="radio" name="ropa_nueva" value="nunca_segunda_mano" id="nunca_segunda_mano">Casi
+                        nunca/ Compro de segunda mano
                     </div>
                 </div>
-                <div class="" id="consumo-2">
-                    <div class="" id="conteiner">
+                <div class="flex justify-center" id="consumo-2">
+                    <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
                         <h1>¿Cada cuantos renuevas tus dispositivos electronicos?</h1>
-                        <input type="radio" name="disp_electronicos" value="uno_dos_año" id="uno_dos_año">Cada 1-2 años
-                        <input type="radio" name="disp_electronicos" value="tres_cuatro_año" id="tres_cuatro_año">Cada 3-4 años
-                        <input type="radio" name="disp_electronicos" value="cuatro_año" id="cuatro_año">Cada 4 años o mas
+                        <input type="radio" name="disp_electronicos" value="uno_dos_año" id="uno_dos_año">Cada 1-2
+                        años
+                        <input type="radio" name="disp_electronicos" value="tres_cuatro_año" id="tres_cuatro_año">Cada
+                        3-4 años
+                        <input type="radio" name="disp_electronicos" value="cuatro_año" id="cuatro_año">Cada 4 años
+                        o mas
                     </div>
                 </div>
-                <div class="" id="consumo-3">
-                    <div class="" id="conteiner">
+                <div class="flex justify-center" id="consumo-3">
+                    <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
                         <h1>¿Donas o Vendes articulos de segunda mano?</h1>
-                        <input type="radio" name="donas_vendes" value="frecuente_dono" id="frecuente_dono">Frecuentemente regalo o vendo cosas que no uso
-                        <input type="radio" name="donas_vendes" value="aveces_dono" id="aveces_dono">Regalo o vendo algunas cosas
-                        <input type="radio" name="donas_vendes" value="tiro_regalo" id="tiro_regalo">Tiro o guardo lo que no uso
+                        <input type="radio" name="donas_vendes" value="frecuente_dono"
+                            id="frecuente_dono">Frecuentemente regalo o vendo cosas que no uso
+                        <input type="radio" name="donas_vendes" value="aveces_dono" id="aveces_dono">Regalo o vendo
+                        algunas cosas
+                        <input type="radio" name="donas_vendes" value="tiro_regalo" id="tiro_regalo">Tiro o guardo
+                        lo que no uso
                     </div>
                 </div>
 
-                <div class="" id="residuos-1">
-                    <div class="" id="conteiner">
+                <div class="flex justify-center" id="residuos-1">
+                    <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
                         <h1>¿Con que frecuencia reciclas?</h1>
                         <input type="radio" name="reciclas" value="siempre" id="siempre">Siempre
                         <input type="radio" name="reciclas" value="aveces" id="aveces">A veces
                         <input type="radio" name="reciclas" value="casi_nunca" id="casi_nunca">Casi nunca
                     </div>
                 </div>
-                <div class="" id="residuos-2">
-                    <div class="" id="conteiner">
+                <div class="flex justify-center" id="residuos-2">
+                    <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
                         <h1>¿Como describirias la cantidad de basura que generas?</h1>
                         <input type="radio" name="basura_generada" value="muy_poca" id="muy_poca">Muy poca
                         <input type="radio" name="basura_generada" value="moderada" id="moderada">Moderada
                         <input type="radio" name="basura_generada" value="bastante" id="bastante">Bastante
                     </div>
                 </div>
-                <div class="" id="residuos-3">
-                    <div class="" id="conteiner">
+                <div class="flex justify-center" id="residuos-3">
+                    <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
                         <h1>¿Cuantas bolsas de basura produces a la semana?</h1>
-                        <input type="number" name="bolsas_basura" id="bolsas_basura" min="0" placeholder="Bolsas/semana"> Bolsas/semana
-                        <input type="radio" name="bolsa_basura_opcion" value="no_se_basura" id="no_se_basura"> No lo se
+                        <input type="number" name="bolsas_basura" id="bolsas_basura" min="0"
+                            placeholder="Bolsas/semana"> Bolsas/semana
+                        <input type="radio" name="bolsa_basura_opcion" value="no_se_basura" id="no_se_basura"> No lo
+                        se
+                    </div>
+                </div>
+                <div class="flex justify-center" id="integrantes">
+                    <div class="flex flex-col gap-2 w-full sm:w-1/2" id="conteiner">
+                        <h1>¿Cuantas personas viven en la casa?</h1>
+                        <input type="number" name="personas" id="personas" min="0" placeholder="Numero de Personas">
+                        Bolsas/semana
                     </div>
                 </div>
 
-                <input type="submit" value="calcular">
-            </form>
-           
+               
+                </form>
+
         </section>
-        <section class="" id="start">
-            <button class="">Comenzar</button> <!--Cuando se presione este boton se oculta y se muestra la seccion "controls" -->
+        <section class="start flex justify-center mt-4" id="start">
+            <button class="border rounded px-4 py-2">Comenzar</button>
+            <!--Cuando se presione este boton se oculta y se muestra la seccion "controls" -->
         </section>
 
-        <section class="" id="controls flex justify-between mt-4 w-full sm:w-1/2 mx-auto">
+        <section class="controls flex justify-between mt-4 w-full sm:w-1/2 mx-auto">
             <button class="border rounded px-4 py-2">Atras</button>
             <button class="border rounded px-4 py-2">Siguiente</button>
         </section>
-         <section class="" id="calcular">
-            <button class="">Calcular</button>
+        <section class="start flex justify-center mt-4" id="calcular">
+            <button class="border rounded px-4 py-2">Calcular</button>
         </section>
 
     </main>
 
     <!-- FOOTER -->
     <footer class="text-center py-4">
-
+        <p>Creado por Alumnos del ITS 2do Full Stack</p>
     </footer>
 
     <!-- tu JS -->
@@ -215,4 +263,3 @@
 </body>
 
 </html>
-
