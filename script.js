@@ -154,8 +154,8 @@ document.addEventListener("DOMContentLoaded", () => {
         parseFloat(document.getElementById("vuelos_nac").value) || 0;
       const vuelosInt =
         parseFloat(document.getElementById("vuelos_int").value) || 0;
-      const factorVueloNac = 1050 * 0.324;
-      const factorVueloInt = 7500 * 0.324;
+      const factorVueloNac = 1050 * 0.272;
+      const factorVueloInt = 7500 * 0.175;
       const huellaVuelos =
         vuelosNac * factorVueloNac + vuelosInt * factorVueloInt;
 
