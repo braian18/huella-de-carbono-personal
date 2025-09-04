@@ -174,3 +174,6 @@ button:hover {
     font-weight: bold;
     transform: scale(1.15);
 }
+input[type="number"] {
+  color: #373A39; 
+}
