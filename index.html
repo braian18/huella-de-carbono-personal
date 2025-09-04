@@ -24,22 +24,23 @@
     <title>Calculadora-CO2e</title>
 </head>
 
-<body class="normal">
+<body>
 
     <!-- NAV -->
-    <nav class="claro flex flex-row sm:flex-row items-center sm:justify-between p-4 gap-2 sm:gap-0">
-        <div class="logo"><img src="peralta.png" class="h-32 sm:h-36"></div>
+    <nav id="menu" class="claro flex flex-row sm:flex-row items-center sm:justify-between p-4 gap-2 sm:gap-0">
+        <div class="logo"><a href="index.html"><img src="peralta.png" class="h-32 sm:h-36"></a></div>
         <div class="titulo text-center sm:text-left">Calculadora CO2e</div>
         <div class="boton mt-2 sm:mt-0 cursor-pointer" id="oscuro">
             <i class="material-icons">dark_mode</i>
         </div>
     </nav>
-    <main class="p-4 sm:p-8 flex flex-col gap-6">
+
+    <main class="flex flex-col gap-6 normal">
 
         <section class="flex flex-col items-center text-center gap-2">
             <form id="formulario">
                 <div class="" id="inicio">
-                    <img src="co2e.png" alt="" class="max-w-full h-auto">
+                    <img src="a.png" alt="" class="max-w-full h-auto" id="inicio-img">
                     <p>
                         "Un futuro mas verde empieza con una huella mas chica"
                     </p>
@@ -50,7 +51,7 @@
         <section id="cardsContainer" class="formulario flex flex-col gap-6">
 
             <!-- ENERGIA 1 -->
-            <div class="card w-full sm:w-1/2 p-6 border rounded-2xl shadow-lg hidden">
+            <div class="card w-full sm:w-1/2 p-6 border rounded-2xl shadow-lg hidden ">
                 <div id="energia-1" class="flex justify-center">
                     <div id="conteiner" class="flex flex-col gap-2 w-full sm:w-1/2">
                         <h1>¿Cual es el consumo mensual promedio en tu hogar?</h1>
@@ -276,13 +277,13 @@
         </section>
 
         <section id="botones" class="controls flex justify-between mt-4 w-full max-w-xl mx-auto">
-            <button id="btnAtras" class="border rounded px-4 py-2 hidden">Atras</button>
-            <button id="btnSiguiente" class="border rounded px-4 py-2 hidden">Siguiente</button>
+            <button id="btnAtras" class="border rounded px-4 py-2 hidden btnAtrass">Atras</button>
+            <button id="btnSiguiente" class="border rounded px-4 py-2 hidden btnSiguientes">Siguiente</button>
         </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="claro flex flex-row sm:flex-row items-center sm:justify-between p-4 gap-2 sm:gap-0">
+    <footer class="text-center py-4">
         <p>Creado por Alumnos del ITS 2do Full Stack</p>
     </footer>
 
