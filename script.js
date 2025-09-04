@@ -9,11 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const btnAtras = document.getElementById("btnAtras");
   const btnSiguiente = document.getElementById("btnSiguiente");
+  const btnComenzar = document.getElementById("btnComenzar");
+  const btnCalcular = document.getElementById("btnCalcular");
   const cards = document.querySelectorAll(".card");
 
   botonD.addEventListener("click", () => {
     if (main.classList.contains("oscuro")) {
-      // 🌞 Volvemos a modo claro
+      // Volvemos a modo claro
       nav.classList.remove("dark");
       main.classList.remove("oscuro");
       nav.classList.add("claro");
@@ -23,11 +25,17 @@ document.addEventListener("DOMContentLoaded", () => {
       footer.classList.remove("footero");
       footer.classList.add("footer");
 
-      btnAtras.classList.remove("btnAtraso");
-      btnAtras.classList.add("btnAtrass");
+      btnAtras.classList.remove("btnOscuro");
+      btnAtras.classList.add("btnClaro");
 
-      btnSiguiente.classList.remove("btnSiguienteo");
-      btnSiguiente.classList.add("btnSiguientes");
+      btnSiguiente.classList.remove("btnOscuro");
+      btnSiguiente.classList.add("btnClaro");
+
+      btnComenzar.classList.remove("btnOscuro")
+      btnComenzar.classList.add("btnClaro")
+
+      btnCalcular.classList.remove("btnOscuro")
+      btnCalcular.classList.add("btnClaro")
 
       cards.forEach(card => {
         card.classList.remove("cardsOscuro");
@@ -35,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
     } else {
-      // 🌙 Activamos modo oscuro
+      //  Activamos modo oscuro
       nav.classList.remove("claro");
       main.classList.remove("natural");
       nav.classList.add("dark");
@@ -45,11 +53,18 @@ document.addEventListener("DOMContentLoaded", () => {
       footer.classList.remove("footer");
       footer.classList.add("footero");
 
-      btnAtras.classList.remove("btnAtrass");
-      btnAtras.classList.add("btnAtraso");
+      btnAtras.classList.add("btnOscuro");
+      btnAtras.classList.remove("btnClaro");
 
-      btnSiguiente.classList.remove("btnSiguientes");
-      btnSiguiente.classList.add("btnSiguienteo");
+      btnSiguiente.classList.add("btnOscuro");
+      btnSiguiente.classList.remove("btnClaro");
+
+      btnComenzar.classList.add("btnOscuro")
+      btnComenzar.classList.remove("btnClaro")
+      
+      btnCalcular.classList.add("btnOscuro")
+      btnCalcular.classList.remove("btnClaro")
+      
 
       cards.forEach(card => {
         card.classList.remove("cardsClaro");
@@ -396,6 +411,7 @@ const cardsContainer = document.getElementById("cardsContainer");
 const controls = document.getElementById("botones");
 const btnAtras = document.getElementById("btnAtras");
 const btnSiguiente = document.getElementById("btnSiguiente");
+
 
 const cards = document.querySelectorAll(".card");
 let currentCard = 0;
