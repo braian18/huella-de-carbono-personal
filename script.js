@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   botonD.addEventListener("click", () => {
+     const icono = botonD.querySelector("i");
     if (main.classList.contains("oscuro")) {
       // Volvemos a modo claro
       nav.classList.remove("dark");
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       nav.classList.add("claro");
       main.classList.add("natural");
       inicioImg.src = "a.png";
+
 
       footer.classList.remove("footero");
       footer.classList.add("footer");
@@ -46,8 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
         card.classList.add("cardsClaro");
       });
 
+       icono.textContent = "dark_mode";
     } else {
       //  Activamos modo oscuro
+       icono.textContent = "light_mode";
       nav.classList.remove("claro");
       main.classList.remove("natural");
       nav.classList.add("dark");
