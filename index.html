@@ -21,6 +21,10 @@
     <!-- tu CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!--Chart.js-->
+        <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <title>Calculadora-CO2e</title>
 </head>
 
@@ -57,7 +61,7 @@
                         <h1>¿Cual es el consumo mensual promedio en tu hogar?</h1>
                        <label></label> <input type="number" name="consumo_energia" id="consumo_energia" min="0"
                             class="border rounded p-2 w-full sm:w-auto"> kWh/mes 
-                        <label> <input type="radio" name="no_se_energia" id="no_se_energia" class="mt-2"> No lo se </label>
+                        <label> <input type="radio" name="no_se_energia" id="no_se_energia" class="mt-2" checked> No lo se </label>
                     </div>
                 </div>
             </div>
@@ -99,7 +103,7 @@
                         <input type="number" id="km_vehiculo" min="0" placeholder="KM/año"
                             class="border rounded p-2 w-full sm:w-auto">KM/año
                       <label><input type="radio" name="km_vehiculo" id="no_se_vehiculo">Si tengo, no se cuanto recorre al año </label>
-                        <label><input type="radio" name="km_vehiculo" id="no_tengo_vehiculo">No tengo</label>
+                        <label><input type="radio" name="km_vehiculo" id="no_tengo_vehiculo" checked>No tengo</label>
                     </div>
                 </div>
             </div>
@@ -108,16 +112,13 @@
                     <div class="flex flex-col gap-2 w-full sm:w-1/2" >
                         <h1>¿QUÈ COMBUSTIBLE USA EL VEHÍCULO?</h1>
                         <div class="flex flex-col sm:flex-col sm:flex-wrap gap-2">
-                           <label><input type="radio" name="combustible_vehiculo" value="gasolina" id="gasolina">Gasolina</label>
+                           <label><input type="radio" name="combustible_vehiculo" value="gasolina" id="gasolina" checked>Gasolina</label>
                             <label><input type="radio" name="combustible_vehiculo" value="diesel" id="diesel">Diesel</label>
                             <label><input type="radio" name="combustible_vehiculo" value="hibrido_no" id="hibrido_no">Hibrido
                             (No
                             enchufable)</label>
                             <label><input type="radio" name="combustible_vehiculo" value="electrico"
                                 id="electrico">Hibrido/Electrico</label>
-                            <label><input type="radio" name="combustible_vehiculo" value="no_uso_vehiculo"
-                                id="no_uso_vehiculo">No
-                            uso
                         </div>
                     </div>
                 </div>
@@ -130,7 +131,7 @@
                             <label><input type="radio" name="transporte_publico" value="2dias" id="">2/3 dias</label>
                             <label><input type="radio" name="transporte_publico" value="3_4dias" id="">4/5 dias</label>
                             <label><input type="radio" name="transporte_publico" value="5_6dias" id="">6/7 dias</label>
-                            <label><input type="radio" name="transporte_publico" value="no_uso_trasporte_publico" id="">1 o No
+                            <label><input type="radio" name="transporte_publico" value="no_uso_trasporte_publico" id="" checked>1 o No
                             uso
                         </div>
                     </div>
@@ -153,7 +154,7 @@
                 <div class="flex justify-center" id="alimentacion-1">
                     <div class="flex flex-col gap-2 w-full sm:w-1/2" >
                         <h1>¿CÒMO DESCRIBIRIAS TU DIETA?</h1>
-                      <label><input type="radio" name="dieta" value="equilibrada" id="equilibrada">Equilibrada</label>
+                      <label><input type="radio" name="dieta" value="equilibrada" id="equilibrada" checked>Equilibrada</label>
                         <label><input type="radio" name="dieta" value="carnes_rojas" id="carnes_rojas">Rica en carnes rojas</label>
                         <label><input type="radio" name="dieta" value="pescetariana" id="pescetariana">Pescetariana</label>
                         <label><input type="radio" name="dieta" value="vegetariana" id="vegetariana">Vegetariana</label>
@@ -169,7 +170,7 @@
                             productos de origen local y/o de temporada</label>
                         <label><input type="radio" name="origen_comida" value="envasados_procesados"
                                 id="envasados_procesados">Optas por productos envasados y/o procesados</label>
-                        <label><input type="radio" name="origen_comida" value="no_me_importa" id="no_me_importa">No le doy
+                        <label><input type="radio" name="origen_comida" value="no_me_importa" id="no_me_importa" checked>No le doy
                             importancia a esto</label>
                     </div>
                 </div>
@@ -183,7 +184,7 @@
                         <label><input type="radio" name="comida_sobrante" value="tiro_algo" id="tiro_algo">Tiro algo de
                         comida a la basura ocacionalmente</label>
                         <label><input type="radio" name="comida_sobrante" value="no_importa_desperdicio"
-                            id="no_importa_desperdicio">No le doy importancia a eso</label>
+                            id="no_importa_desperdicio" checked>No le doy importancia a eso</label>
                     </div>
                 </div>
             </div>
@@ -193,8 +194,8 @@
                         <h1>¿CON QUE FRECUENCIA COMPRAS ROPA NUEVA?</h1>
                         <label><input type="radio" name="ropa_nueva" value="varias_veces" id="varias_veces">Varias veces al
                         mes</label>
-                        <label><input type="radio" name="ropa_nueva" value="una_cada_dos" id="una_cada_dos">Una vez al mes
-                        oa cada dos meses</label>
+                        <label><input type="radio" name="ropa_nueva" value="una_cada_dos" id="una_cada_dos" checked>Una vez al mes
+                        o cada dos meses</label>
                         <label><input type="radio" name="ropa_nueva" value="poco_al_año" id="poco_al_año">Unas pocas veces
                         al año</label>
                         <label><input type="radio" name="ropa_nueva" value="nunca_segunda_mano" id="nunca_segunda_mano">Casi
@@ -208,7 +209,7 @@
                         <h1>¿CADA CUANTO RENUEVAS TUS DISPOSITIVOS ELECTRONICOS?</h1>
                         <label><input type="radio" name="disp_electronicos" value="uno_dos_año" id="uno_dos_año">Cada 1-2
                         años</label>
-                        <label><input type="radio" name="disp_electronicos" value="tres_cuatro_año" id="tres_cuatro_año">Cada
+                        <label><input type="radio" name="disp_electronicos" value="tres_cuatro_año" id="tres_cuatro_año" checked>Cada
                         3-4 años</label>
                         <label><input type="radio" name="disp_electronicos" value="cuatro_año" id="cuatro_año">Cada 4 años</label>
                         o mas
@@ -222,7 +223,7 @@
                         <label><input type="radio" name="donas_vendes" value="frecuente_dono"
                             id="frecuente_dono">Frecuentemente
                         regalo o vendo cosas que no uso</label>
-                        <label><input type="radio" name="donas_vendes" value="aveces_dono" id="aveces_dono">Regalo o vendo
+                        <label><input type="radio" name="donas_vendes" value="aveces_dono" id="aveces_dono" checked>Regalo o vendo
                         algunas cosas</label>
                         <label><input type="radio" name="donas_vendes" value="tiro_regalo" id="tiro_regalo">Tiro o guardo
                         lo que no uso
@@ -234,7 +235,7 @@
                     <div class="flex flex-col gap-2 w-full sm:w-1/2" >
                         <h1>¿CON QUE FRECUENCIA RECICLAS?</h1>
                         <label><input type="radio" name="reciclas" value="siempre" id="siempre">Siempre</label>
-                        <label><input type="radio" name="reciclas" value="aveces" id="aveces">A veces</label>
+                        <label><input type="radio" name="reciclas" value="aveces" id="aveces" checked>A veces</label>
                         <label><input type="radio" name="reciclas" value="casi_nunca" id="casi_nunca">Casi nunca</label>
                     </div>
                 </div>
@@ -244,7 +245,7 @@
                     <div class="flex flex-col gap-2 w-full sm:w-1/2" >
                         <h1>¿CÒMO DESCRIBIRIAS LA CANTIDAD DE BASURA QUE GENERAS?</h1>
                         <label><input type="radio" name="basura_generada" value="muy_poca" id="muy_poca">Muy poca</label>
-                        <label><input type="radio" name="basura_generada" value="moderada" id="moderada">Moderada</label>
+                        <label><input type="radio" name="basura_generada" value="moderada" id="moderada"checked>Moderada</label>
                         <label><input type="radio" name="basura_generada" value="bastante" id="bastante">Bastante</label>
                     </div>
                 </div>
@@ -257,7 +258,7 @@
                             placeholder="Bolsas/semana">
                         
                        </label>
-                       <label><input type="radio" name="bolsa_basura_opcion" value="no_se_basura" id="no_se_basura"> No lo
+                       <label><input type="radio" name="bolsa_basura_opcion" value="no_se_basura" id="no_se_basura" checked> No lo
                         se</label>
                     </div>
                 </div>
@@ -270,6 +271,17 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="card w-full sm:w-1/2 p-6 border rounded-2xl shadow-lg hidden" id="resultadoCard">
+                <div class="flex justify-center">
+                    <div class="flex flex-col gap-2 w-full sm:w-1/2">
+                        <h1>Tu Huella de Carbono Anual Estimada:</h1>
+                        <p id="huellaResultado" class="text-2xl font-bold"></p>
+                        <canvas id="huellaChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
     
             <section class="start flex justify-center mt-4 " id="calcular">
                 <button class="b px-4 py-2 rounded-full border-2 hidden btnClaro" id="btnCalcular" type="submit">Calcular</button>

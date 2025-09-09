@@ -91,7 +91,7 @@ function calcularEnergiaEnCasa() {
   if (!noSeEnergia && consumoEnergiaInput.value) {
     consumoEnergia = parseFloat(consumoEnergiaInput.value);
   } else {
-    consumoEnergia = 300;
+    consumoEnergia = 800;
   }
   const factorEmisionEnergia = 0.486;
   const huellaEnergia = consumoEnergia * 12 * factorEmisionEnergia;
@@ -364,6 +364,12 @@ function calcularResiduos() {
   return factorReciclas + factorBasuraGenerada + bolsasBasura * factorBolsasBasura;
 }
 
+  const resultadoCard = document.getElementById("resultadoCard");
+  const huellaResultado = document.getElementById("huellaResultado");
+  const huellaChartCanvas = document.getElementById("huellaChart");
+  let myChart; // Variable para almacenar la instancia del gráfico
+
+
 document.getElementById("formulario").addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -386,12 +392,69 @@ document.getElementById("formulario").addEventListener("submit", function (event
       huellaConsumo +
       huellaResiduos) / 1000;
 
-  alert(
-    "Tu huella de carbono estimada anual es: " +
-      huellaTotal.toFixed(1) +
-      " T CO2e"
-  );
+  // Ocultar el formulario y mostrar la tarjeta de resultados
+  cardsContainer.classList.add("hidden");
+  controls.classList.add("hidden");
+  resultadoCard.classList.remove("hidden");
+
+  // Mostrar el resultado en la tarjeta
+  huellaResultado.textContent = huellaTotal.toFixed(1) + " T CO2e";
+
+  // Crear o actualizar el gráfico
+  if (myChart) {
+    myChart.destroy(); // Destruir la instancia anterior si existe
+  }
+
+  myChart = new Chart(huellaChartCanvas, {
+    type: 'doughnut', // Puedes cambiar a 'pie', 'doughnut', etc.
+    data: {
+      labels: ['Hogar', 'Movilidad', 'Dieta', 'Consumo', 'Residuos'],
+      datasets: [{
+        label: 'Huella de Carbono (T CO2e)',
+        data: [
+          huellaPorPersona / 1000, // Dividir por 1000 para que esté en Toneladas
+          huellaMovilidad / 1000,
+          huellaDieta / 1000,
+          huellaConsumo / 1000,
+          huellaResiduos / 1000
+        ],
+        backgroundColor: [
+          'rgba(244, 251, 220, 1)', // #c2f3deff
+          'rgba(219, 250, 239, 1)', // #c2c0eeff
+          'rgba(250, 219, 220, 1)', // #F9F7DA
+          'rgba(250, 219, 249, 1)',  // #e2a9ebff
+          'rgba(220, 230, 250, 1)'   // #373A39
+        ],
+        borderColor: [
+          'rgba(0, 0, 0, 1)',
+          'rgba(0, 0, 0, 1)',
+          'rgba(0, 0, 0, 1)',
+          'rgba(0, 0, 0, 1)',
+          'rgba(0, 0, 0, 1)'
+        ],
+        borderWidth: 1.5
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'T CO2e'
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: false // Ocultar la leyenda si solo hay un dataset
+        }
+      }
+    }
+  });
 });
+
 
 ////
 const btnComenzar = document.getElementById("btnComenzar");
@@ -405,15 +468,12 @@ const btnSiguiente = document.getElementById("btnSiguiente");
 const cards = document.querySelectorAll(".card");
 let currentCard = 0;
 
-// Ocultar todas las cards
 function mostrarCard(index) {
   cards.forEach((card, i) => {
     card.classList.toggle("hidden", i !== index);
   });
-
   // Mostrar / ocultar botones
   const btnCalcular = document.getElementById("btnCalcular");
-
   if (index === 0) {
     // Primera pregunta → solo mostrar siguiente
     btnAtras.classList.add("hidden");
